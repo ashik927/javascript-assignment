@@ -1,10 +1,10 @@
 function feetToMile(n){
-    var feet=100000;
+    var feet=n;
     var mile=feet*0.000189394;
     return mile;
 }
 
-mileResult=feetToMile(15);
+mileResult=feetToMile(1000);
 console.log(mileResult);
 
 function woodCalculator(chair,table,bed){
@@ -18,26 +18,23 @@ totalResult=woodCalculator(3,4,5);
 console.log(totalResult);
 
 function brickCalculator(n){
-    for(i=1;i<=n;i++){
-        if(i<=1 && i<=10){
-            var count3=i;
+    
+        if(n>=1 && n<=10){
+            var count3=n;
+            console.log(count3*15*1000);
         }
-        else if(i<=11 && i<=20){
-            var count1=i;
+        else if(n>=11 && n<=20){
+            var count1=n-10;
+            console.log(count1*12*1000+150000);
         }
-        else{
-            var count2=i;
+        else if(n>20){
+            var count2=n-20;
+            console.log(count2*10*1000+270000);
         }
-    }
-    var count3=count3*15*1000;
-    var count1=count1*12*1000;
-    var count2=count2*10*1000;
-    var sum=count3+count1+count2;
-    return sum;     
+ 
 }
+brickResult=brickCalculator(21);
 
-brickResult=brickCalculator(12);
-console.log(brickResult);
 
 
 function tinyFriend(name){
